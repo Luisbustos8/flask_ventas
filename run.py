@@ -1,12 +1,12 @@
-from flask import Flask
+from flask import Flask, render_template #RenderTem
 import csv
 
 app = Flask(__name__) #Creamos nuestra aplicación
 
 @app.route("/")
 def index():
-    fventas = open ("./sales10.csv", "r")
-    csvreader = csv.reader(fventas, delimiter=",")
+    fventas = open ("./sales10.csv", "r") #enrutamos la librería.
+    csvreader = csv.reader(fventas, delimiter=",") #leemos y delimitamos hasta la coma
 
     registros = []
     d = {}
@@ -21,4 +21,4 @@ def index():
                 d[linea[0]] = {"ingresos": float(linea[11]), "beneficios": float(linea[13])}
    
 
-    return d
+    return render_template("region.html")
