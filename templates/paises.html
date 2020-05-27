@@ -11,16 +11,16 @@
     <header>
         GLOBAL S.L.
     </header>
-    <center><h1>Ventas por región</h1></center>
+    <center><h1>Ventas por país</h1></center>
     <table>
         <tr>
-            <th>Region</th>
+            <th>País</th>
             <th>Ventas</th>
             <th>Beneficios</th>
         </tr>
-        {% for region, data in ventas.items() %} 
+        {% for paises, data in ventas.items() %} 
         <tr>
-            <td class="region">{{ region }}</td>
+            <td class="paises">{{ paises }}</td>
             <td>{{ data.ingresos }}</td>
             <td>{{ data.beneficios }}</td>
         </tr>

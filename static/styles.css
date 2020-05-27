@@ -22,6 +22,10 @@ th {
     background-color: #3AB17D;
     color: white;
 }
+h1 {
+    background-color: #669FC5;
+    color: black;
+}
 .region {
     font-weight: bold;
     color: #A4205A;
