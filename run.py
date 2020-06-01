@@ -5,7 +5,7 @@ app = Flask(__name__) #Creamos nuestra aplicación
 
 @app.route("/")
 def index():
-    fventas = open ("./sales.csv", "r") #enrutamos la librería.
+    fventas = open ("./sales10.csv", "r") #enrutamos la librería.
     csvreader = csv.reader(fventas, delimiter=",") #leemos y delimitamos hasta la coma
 
    
@@ -26,7 +26,7 @@ def index():
 def paises():
     region_name = request.values["region"]
 
-    fventas = open("./sales.csv", "r")
+    fventas = open("./sales10.csv", "r")
     csvreader= csv.reader(fventas, delimiter=",")#Creas variable de fventas y lo delimitas por una coma.
 
     d = {}
